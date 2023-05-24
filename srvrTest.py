@@ -2,9 +2,7 @@ import socket
 from datetime import datetime
 
 host = input('Enter interface IP: ')
-# host = '192.168.70.100'
 port = int(input('Local TCP Port to open: '))
-# port = 3701
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((host, port))
@@ -27,4 +25,3 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         print('[INFO] Closing connection. Exiting application.')
     except Exception as e:
         print(f'[ERROR] Error occured! Exiting application.\nErr: {e}, Type: {type(e)}.')
-
